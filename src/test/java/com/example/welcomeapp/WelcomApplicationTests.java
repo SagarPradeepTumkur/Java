@@ -1,4 +1,3 @@
-```java
 package com.example.welcomeapp;
 
 import org.junit.jupiter.api.Test;
@@ -10,4 +9,4 @@ class WelcomeAppApplicationTests {
     void contextLoads() {
     }
 }
-```
+
