@@ -1,4 +1,4 @@
-```java
+
 package com.example.welcomeapp;
 
 import org.springframework.boot.SpringApplication;
