@@ -6,7 +6,8 @@
 
     <groupId>com.example</groupId>
     <artifactId>welcome-web-app</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
+    <packaging>war</packaging>
     <name>welcome-web-app</name>
     <description>Simple Spring Boot web app with welcome message</description>
 
@@ -64,7 +65,15 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-        </plugins>
+	</plugin>
+	<plugin>
+                     <groupId>org.apache.maven.plugins</groupId>
+                     <artifactId>maven-war-plugin</artifactId>
+                     <version>3.4.0</version>
+                     <configuration>
+                         <failOnMissingWebXml>false</failOnMissingWebXml>
+                     </configuration>
+                 </plugin>
+    </plugins>
     </build>
 </project>
