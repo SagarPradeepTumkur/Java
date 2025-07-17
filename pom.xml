@@ -15,6 +15,8 @@
         <java.version>21</java.version> <!-- Running on JDK 21.0.7 -->
         <spring-boot.version>3.3.5</spring-boot.version>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+        <sonar.projectKey>welcome-web-app</sonar.projectKey>
+        <sonar.projectName>Welcome Web App</sonar.projectName>
     </properties>
 
     <dependencies>
@@ -43,6 +45,7 @@
 
     <build>
         <plugins>
+            <!-- Java Compiler -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -54,6 +57,8 @@
                     <encoding>${maven.compiler.encoding}</encoding>
                 </configuration>
             </plugin>
+
+            <!-- Spring Boot Plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -66,6 +71,8 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <!-- WAR Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
@@ -73,6 +80,13 @@
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
+            </plugin>
+
+            <!-- 🔍 SonarQube Plugin -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.11.0.3922</version>
             </plugin>
         </plugins>
     </build>
